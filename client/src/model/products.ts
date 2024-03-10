@@ -8,12 +8,12 @@ export interface Product {
     discountPercentage: number;
     rating: number;
     stock: number;
-    brand: string;
+    brand?: string;
     category: string;
     thumbnail: string;
     images: string[];
 }
 
 export function getProducts(): Product[] {
-    return (products as { items: Product[] }).items;
+    return products.items;
 }
